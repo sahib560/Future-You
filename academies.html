@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academies - Future You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <div class="academies-fullscreen">
+        <header>
+            <nav>
+                <div class="logo">Future You</div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                     <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="hub.html">Motivation</a></li>
+                    <li><a href="guidance.html"> Guidance</a></li>
+                    <li><a href="academies.html" class="active">Institutes</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="academies-main">
+            <!-- Header Section -->
+            <section class="academies-header-section" data-aos="fade-up">
+                <h1>🎓 Recommended Academies & Universities</h1>
+                <p>Find the best places to study and grow your career path.</p>
+                <div class="glowing-divider"></div>
+            </section>
+
+            <!-- Featured Academies Section -->
+            <section class="featured-academies-section" data-aos="fade-up" data-aos-delay="200">
+                <h2>⭐ Featured Academies</h2>
+                <div class="featured-academies-grid">
+                    <div class="featured-academy-card" data-aos="slide-up" data-aos-delay="100">
+                        <div class="featured-academy-image">
+                            <div class="featured-placeholder">🏛️</div>
+                        </div>
+                        <div class="featured-academy-content">
+                            <h3>LUMS</h3>
+                            <p class="featured-location">Lahore</p>
+                            <p class="featured-description">Pakistan's premier university offering world-class education in business, social sciences, and humanities with international partnerships.</p>
+                            <a href="#" class="btn-glow">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="featured-academy-card" data-aos="slide-up" data-aos-delay="200">
+                        <div class="featured-academy-image">
+                            <div class="featured-placeholder">⚙️</div>
+                        </div>
+                        <div class="featured-academy-content">
+                            <h3>NED University</h3>
+                            <p class="featured-location">Karachi</p>
+                            <p class="featured-description">Leading engineering institution with state-of-the-art facilities and industry partnerships for cutting-edge technology education.</p>
+                            <a href="#" class="btn-glow">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="featured-academy-card" data-aos="slide-up" data-aos-delay="300">
+                        <div class="featured-academy-image">
+                            <div class="featured-placeholder">🚀</div>
+                        </div>
+                        <div class="featured-academy-content">
+                            <h3>NUST</h3>
+                            <p class="featured-location">Islamabad</p>
+                            <p class="featured-description">National University of Sciences and Technology providing innovative programs in engineering, IT, and business administration.</p>
+                            <a href="#" class="btn-glow">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search and Filter Section -->
+            <section class="search-filter-section" data-aos="fade-up" data-aos-delay="400">
+                <div class="search-filter">
+                    <input type="text" id="search" placeholder="Search academies...">
+                    <select id="city-filter">
+                        <option value="">All Cities</option>
+                        <option value="karachi">Karachi</option>
+                        <option value="larkana">Larkana</option>
+                        <option value="lahore">Lahore</option>
+                        <option value="islamabad">Islamabad</option>
+                    </select>
+                    <select id="field-filter">
+                        <option value="">All Fields</option>
+                        <option value="tech">Tech</option>
+                        <option value="business">Business</option>
+                        <option value="design">Design</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="medical">Medical</option>
+                    </select>
+                    <button id="search-btn" class="btn-glow">Search</button>
+                </div>
+            </section>
+
+            <!-- Academies Grid Section -->
+            <section class="academies-grid-section" data-aos="fade-up" data-aos-delay="500">
+                <div class="academy-grid">
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="100" data-city="larkana" data-field="tech">
+                        <div class="academy-icon">💻</div>
+                        <h3>Aptech Computer Education</h3>
+                        <p class="academy-location">Larkana</p>
+                        <p class="academy-field">Tech</p>
+                        <p class="academy-description">Comprehensive computer education programs covering software development, web design, and IT certifications.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                        </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="200" data-city="larkana" data-field="medical">
+                        <div class="academy-icon">🏥</div>
+                        <h3>SUM Academy</h3>
+                        <p class="academy-location">Larkana</p>
+                        <p class="academy-field">Medical</p>
+                        <p class="academy-description">Specialized training for MDCARE, nursing, and medical technology.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="200" data-city="karachi" data-field="business">
+                        <div class="academy-icon">💼</div>
+                        <h3>IBA Karachi</h3>
+                        <p class="academy-location">Karachi</p>
+                        <p class="academy-field">Business & Tech</p>
+                        <p class="academy-description">Leading business school offering MBA programs, entrepreneurship courses, and technology management degrees.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="300" data-city="karachi" data-field="engineering">
+                        <div class="academy-icon">⚙️</div>
+                        <h3>NED University</h3>
+                        <p class="academy-location">Karachi</p>
+                        <p class="academy-field">Engineering & Computing</p>
+                        <p class="academy-description">Premier engineering institution providing undergraduate and graduate programs in various engineering disciplines.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="400" data-city="karachi" data-field="design">
+                        <div class="academy-icon">🎨</div>
+                        <h3>Arena Multimedia</h3>
+                        <p class="academy-location">Karachi</p>
+                        <p class="academy-field">Design & Animation</p>
+                        <p class="academy-description">Creative institute specializing in graphic design, animation, multimedia production, and digital arts education.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="400" data-city="karachi" data-field="design">
+                        <div class="academy-icon">⚙️</div>
+                        <h3>Habib University</h3>
+                        <p class="academy-location">Karachi</p>
+                        <p class="academy-field">Design & Arts</p>
+                        <p class="academy-description">Specialized training in visual arts, design, and digital media.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="500" data-city="lahore" data-field="business">
+                        <div class="academy-icon">📊</div>
+                        <h3>LUMS</h3>
+                        <p class="academy-location">Lahore</p>
+                        <p class="academy-field">Business & Social Sciences</p>
+                        <p class="academy-description">World-class university offering programs in business administration, economics, and social sciences.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                    <div class="academy-card" data-aos="fade-up" data-aos-delay="600" data-city="islamabad" data-field="tech">
+                        <div class="academy-icon">🚀</div>
+                        <h3>NUST</h3>
+                        <p class="academy-location">Islamabad</p>
+                        <p class="academy-field">Engineering & Technology</p>
+                        <p class="academy-description">National University of Sciences and Technology offering cutting-edge programs in engineering and technology fields.</p>
+                        <a href="#" class="btn-glow">Website</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call-to-Action Section -->
+            <section class="academies-cta-section" data-aos="fade-up" data-aos-delay="600">
+                <div class="cta-container">
+                    <h2>Ready to join your dream academy?</h2>
+                    <p>Take our career assessment quiz to discover the perfect educational path for your future.</p>
+                    <a href="guidance.html" class="btn-cta-glow">Explore Your Career Path</a>
+                </div>
+            </section>
+        </main>
+
+        <div class="academies-background">
+            <div class="academies-particle"></div>
+            <div class="academies-particle"></div>
+            <div class="academies-particle"></div>
+            <div class="academies-wave"></div>
+            <div class="academies-wave"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="hub.html">Motivation Hub</a>
+                <a href="academies.html">Academies</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Future You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

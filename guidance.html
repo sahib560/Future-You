@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance Hub - Future You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #020617, #001f4d, #0f172a);
+            color: #e2e8f0;
+        }
+        
+        .guidance-fullscreen {
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            justify-content: center;
+        }
+
+        .career-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 0 15px rgba(0, 245, 212, 0.1);
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            min-height: 320px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .career-card:hover {
+            transform: translateY(-5px);
+            border-color: #00f5d4;
+            box-shadow: 0 0 20px rgba(0, 245, 212, 0.3);
+        }
+
+        .career-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00f5d4, #3b82f6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .career-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .career-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .career-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #f8fafc;
+        }
+
+        .career-description {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .career-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .career-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .video-btn {
+            color: #00f5d4;
+        }
+
+        .video-btn:hover {
+            background: rgba(0, 245, 212, 0.1);
+            border-color: #00f5d4;
+            box-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+        }
+
+        .pdf-btn {
+            color: #3b82f6;
+        }
+
+        .pdf-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .career-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .career-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="guidance-fullscreen">
+        <header>
+            <nav>
+                <div class="logo">Future You</div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="hub.html">Motivation</a></li>
+                    <li><a href="guidance.html" class="active">Guidence</a></li>
+                    <li><a href="academies.html">Institutes</a></li>
+                    <li><a href="about.html">ABbout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="guidance-main">
+            <!-- Header Section -->
+            <section class="guidance-header-section" data-aos="fade-up">
+                <h1>🚀 Career Guidance Hub</h1>
+                <p>Explore career paths, watch real professionals, and download your roadmap to success.</p>
+                <div class="glowing-divider"></div>
+            </section>
+
+            <!-- Career Categories Section -->
+            <section class="career-categories-section" data-aos="fade-up" data-aos-delay="200">
+                <h2>Explore Career Paths</h2>
+
+                <!-- Category Filters -->
+                <div class="category-filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="tech">💻 Tech</button>
+                    <button class="filter-btn" data-filter="design">🎨 Design</button>
+                    <button class="filter-btn" data-filter="health">🩺 Health</button>
+                    <button class="filter-btn" data-filter="business">💼 Business</button>
+                    <button class="filter-btn" data-filter="science">🔬 Science</button>
+                </div>
+
+                <!-- Career Cards Grid -->
+                <div class="career-grid">
+                    <!-- Software Engineer -->
+                    <div class="career-card" data-category="tech" data-aos="fade-up" data-aos-delay="100">
+                        <div class="career-icon">💻</div>
+                        <h3 class="career-title">Software Engineer</h3>
+                        <p class="career-description">Builds applications and systems that power the digital world.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=0pThnRneDjw" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://roadmap.sh/full-stack" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Career Roadmap
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Data Analyst -->
+                    <div class="career-card" data-category="tech" data-aos="fade-up" data-aos-delay="200">
+                        <div class="career-icon">📊</div>
+                        <h3 class="career-title">Data Analyst</h3>
+                        <p class="career-description">Transforms raw data into insights using tools like Excel, SQL, and Python.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=JFA7H1uJ8wU" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://cdn.codewithmosh.com/image/upload/v1722374155/guides/data-analyst-roadmap.pdf" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Data Analyst Roadmap
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AI Engineer -->
+                    <div class="career-card" data-category="tech" data-aos="fade-up" data-aos-delay="300">
+                        <div class="career-icon">🤖</div>
+                        <h3 class="career-title">AI Engineer</h3>
+                        <p class="career-description">Builds intelligent systems using machine learning and neural networks.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=BVr1TpMBVjU" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://roadmap.sh/ai-engineer" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> AI Engineer Roadmap
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Specialist -->
+                    <div class="career-card" data-category="tech" data-aos="fade-up" data-aos-delay="400">
+                        <div class="career-icon">🛡️</div>
+                        <h3 class="career-title">Cybersecurity Specialist</h3>
+                        <p class="career-description">Protects networks and data from digital attacks and breaches.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=v7BNtpw53AA" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://roadmap.sh/cyber-security" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Cybersecurity Learning Path
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Designer -->
+                    <div class="career-card" data-category="design" data-aos="fade-up" data-aos-delay="500">
+                        <div class="career-icon">🎨</div>
+                        <h3 class="career-title">UI/UX Designer</h3>
+                        <p class="career-description">Designs user-friendly interfaces and engaging digital experiences.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=BU_afT-aIn0" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://roadmap.sh/ux-design" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> UI/UX Design Roadmap
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Architect -->
+                    <div class="career-card" data-category="design" data-aos="fade-up" data-aos-delay="600">
+                        <div class="career-icon">🏛️</div>
+                        <h3 class="career-title">Architect</h3>
+                        <p class="career-description">Designs and plans buildings, combining art with structural science.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=M3XiS2CG2So" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://merafuture.pk/career-counselling/architecture-career-in-pakistan/" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Architecture Career Path
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game Developer -->
+                    <div class="career-card" data-category="tech" data-aos="fade-up" data-aos-delay="700">
+                        <div class="career-icon">🎮</div>
+                        <h3 class="career-title">Game Developer</h3>
+                        <p class="career-description">Creates interactive and immersive gaming experiences using modern engines.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=fsEwtkEBXmo" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://roadmap.sh/game-developer" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Game Developer Guide
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Digital Marketer -->
+                    <div class="career-card" data-category="business" data-aos="fade-up" data-aos-delay="800">
+                        <div class="career-icon">📱</div>
+                        <h3 class="career-title">Digital Marketer</h3>
+                        <p class="career-description">Uses social media and SEO to build brand presence and drive growth.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=WUniTVTi_Jk" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://www.coursera.org/resources/job-leveling-matrix-for-digital-marketing-career-pathways" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Digital Marketing Roadmap
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor -->
+                    <div class="career-card" data-category="health" data-aos="fade-up" data-aos-delay="900">
+                        <div class="career-icon">⚕️</div>
+                        <h3 class="career-title">Doctor</h3>
+                        <p class="career-description">Works to improve lives through medical care and innovation.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=RrKGr3JYCGw" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://uthscsa.edu/medicine/education/ume/outreach/become-doctor" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Medical Career Journey
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Teacher -->
+                    <div class="career-card" data-category="business" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="career-icon">📚</div>
+                        <h3 class="career-title">Teacher</h3>
+                        <p class="career-description">Shapes minds and inspires the next generation through education and mentorship.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=6ZFu8JvaKk0" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://www.teachaway.com/blog/how-become-teacher" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Teaching Guide
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Entrepreneur -->
+                    <div class="career-card" data-category="business" data-aos="fade-up" data-aos-delay="1100">
+                        <div class="career-icon">🚀</div>
+                        <h3 class="career-title">Entrepreneur</h3>
+                        <p class="career-description">Creates innovative businesses, drives change, and builds future opportunities.</p>
+                        <div class="career-buttons">
+                            <a href="https://www.youtube.com/watch?v=sT0kX9K0b4A" class="career-btn video-btn">
+                                <i class="fas fa-play-circle"></i> Watch Video
+                            </a>
+                            <a href="https://www.score.org/resource/business-startup-roadmap" class="career-btn pdf-btn">
+                                <i class="fas fa-file-pdf"></i> Startup Roadmap
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Recommended Resources Section -->
+            <section class="resources-section" data-aos="fade-up" data-aos-delay="200">
+                <h2>Recommended Learning Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-link-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="resource-link-icon">🎓</div>
+                        <h3>Coursera</h3>
+                        <p>Professional courses from top universities and companies worldwide.</p>
+                        <a href="https://www.coursera.org" target="_blank" class="btn-resource-glow">Visit Coursera</a>
+                    </div>
+
+                    <div class="resource-link-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="resource-link-icon">💻</div>
+                        <h3>freeCodeCamp</h3>
+                        <p>Free coding bootcamps and certifications for developers.</p>
+                        <a href="https://www.freecodecamp.org" target="_blank" class="btn-resource-glow">Visit freeCodeCamp</a>
+                    </div>
+
+                    <div class="resource-link-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="resource-link-icon">📺</div>
+                        <h3>YouTube Learning</h3>
+                        <p>Free tutorials and courses from expert educators worldwide.</p>
+                        <a href="https://www.youtube.com" target="_blank" class="btn-resource-glow">Explore YouTube</a>
+                    </div>
+
+                    <div class="resource-link-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="resource-link-icon">📚</div>
+                        <h3>edX</h3>
+                        <p>University-level courses from institutions like MIT and Harvard.</p>
+                        <a href="https://www.edx.org" target="_blank" class="btn-resource-glow">Visit edX</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call-to-Action Section -->
+            <section class="cta-section" data-aos="fade-up" data-aos-delay="300">
+                <div class="cta-container">
+                    <h2>Ready to start your journey?</h2>
+                    <p>Take our interactive career assessment quiz to discover your ideal career path.</p>
+                    <a href="quiz.html" class="btn-cta-glow">Take the Career Quiz</a>
+                </div>
+            </section>
+        </main>
+
+        <div class="guidance-background">
+            <div class="guidance-particle"></div>
+            <div class="guidance-particle"></div>
+            <div class="guidance-particle"></div>
+            <div class="guidance-wave"></div>
+            <div class="guidance-wave"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+
+        // Filter functionality for career cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const careerCards = document.querySelectorAll('.career-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    careerCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

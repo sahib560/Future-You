@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Future You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Future You</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="hub.html">Motivation</a></li>
+                <li><a href="guidance.html"> Guidence</a></li>
+                <li><a href="academies.html">Institutes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="result-section" data-aos="fade-up">
+            <div class="glass-card">
+                <h2>Your Future Profile</h2>
+                <div class="chart-container">
+                    <canvas id="result-chart"></canvas>
+                </div>
+                <div class="percentage-counter">
+                    <span id="percentage">0%</span>
+                </div>
+                <div class="result-actions">
+                    <a href="quiz.html" class="btn-glow">Try Again</a>
+                    <button class="btn-glow">Save Result</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="hub.html">Motivation Hub</a>
+                <a href="academies.html">Academies</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Future You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Future You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Future You</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="hub.html">Motivation</a></li>
+                <li><a href="guidance.html">Guidance</a></li>
+                <li><a href="academies.html">Institutes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <main class="quiz-main">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="current-question">1</span> / 12
+                </div>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="glass-card quiz-card" id="quiz-card">
+                    <div class="question-header">
+                        <h2 id="question-title">Question 1</h2>
+                        <div class="question-number">1 / 12</div>
+                    </div>
+                    <p id="question-text">What is your favorite subject in school?</p>
+                    <div class="options">
+                        <button class="option-btn">
+                            <span class="option-icon">📐</span>
+                            <span class="option-text">Mathematics</span>
+                        </button>
+                        <button class="option-btn">
+                            <span class="option-icon">🔬</span>
+                            <span class="option-text">Science</span>
+                        </button>
+                        <button class="option-btn">
+                            <span class="option-icon">🎨</span>
+                            <span class="option-text">Art</span>
+                        </button>
+                        <button class="option-btn">
+                            <span class="option-icon">📚</span>
+                            <span class="option-text">Literature</span>
+                        </button>
+                    </div>
+                    <div class="quiz-actions">
+                        <button id="next-btn" class="btn-quiz-glow" style="display: none;">Next Question</button>
+                        <button id="result-btn" class="btn-quiz-glow" style="display: none;">View Results</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="quiz-background">
+            <div class="quiz-particle"></div>
+            <div class="quiz-particle"></div>
+            <div class="quiz-particle"></div>
+            <div class="quiz-wave"></div>
+            <div class="quiz-wave"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="hub.html">Motivation Hub</a>
+                <a href="academies.html">Academies</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Future You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
